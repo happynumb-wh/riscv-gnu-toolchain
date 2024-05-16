@@ -15,6 +15,7 @@ PK_SRCDIR := @with_pk_src@
 LLVM_SRCDIR := @with_llvm_src@
 DEJAGNU_SRCDIR := @with_dejagnu_src@
 DEBUG_INFO := @debug_info@
+ENABLE_DEFAULT_PIE := @enable_default_pie@
 DEJAGNU_SRCDIR := @with_dejagnu_src@
 
 SIM ?= @WITH_SIM@
@@ -469,6 +470,7 @@ stamps/build-gcc-linux-stage1: $(GCC_SRCDIR) $(GCC_SRC_GIT) stamps/build-binutil
 		--disable-nls \
 		--disable-bootstrap \
 		--src=$(gccsrcdir) \
+		$(ENABLE_DEFAULT_PIE) \
 		$(GCC_CHECKING_FLAGS) \
 		$(MULTILIB_FLAGS) \
 		$(WITH_ABI) \
@@ -505,6 +507,7 @@ stamps/build-gcc-linux-stage2: $(GCC_SRCDIR) $(GCC_SRC_GIT) $(addprefix stamps/b
 		--disable-nls \
 		--disable-bootstrap \
 		--src=$(gccsrcdir) \
+		$(ENABLE_DEFAULT_PIE) \
 		$(GCC_CHECKING_FLAGS) \
 		$(MULTILIB_FLAGS) \
 		$(WITH_ABI) \
@@ -811,6 +814,7 @@ stamps/build-gcc-musl-stage1: $(GCC_SRCDIR) $(GCC_SRC_GIT) stamps/build-binutils
 		--disable-nls \
 		--disable-bootstrap \
 		--src=$(gccsrcdir) \
+		$(ENABLE_DEFAULT_PIE) \
 		$(GCC_CHECKING_FLAGS) \
 		--disable-multilib \
 		$(WITH_ABI) \
@@ -880,6 +884,7 @@ stamps/build-gcc-musl-stage2: $(GCC_SRCDIR) $(GCC_SRC_GIT) stamps/build-musl-lin
 		--disable-nls \
 		--disable-bootstrap \
 		--src=$(gccsrcdir) \
+		$(ENABLE_DEFAULT_PIE) \
 		$(GCC_CHECKING_FLAGS) \
 		--disable-multilib \
 		$(WITH_ABI) \
