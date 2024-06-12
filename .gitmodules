@@ -39,5 +39,5 @@
 	branch = release/17.x
 [submodule "glibc"]
 	path = glibc
-	url = git@github.com:happynumb-wh/glibc.git
+	url = https://github.com/happynumb-wh/glibc.git
 	branch = dasics-glibc-2.36
