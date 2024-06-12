@@ -6,9 +6,6 @@
 	path = gcc
 	url = https://gcc.gnu.org/git/gcc.git
 	branch = releases/gcc-13
-[submodule "glibc"]
-	path = glibc
-	url = https://sourceware.org/git/glibc.git
 [submodule "dejagnu"]
 	path = dejagnu
 	url = https://git.savannah.gnu.org/git/dejagnu.git
@@ -40,3 +37,7 @@
 	path = llvm
 	url = https://github.com/llvm/llvm-project.git
 	branch = release/17.x
+[submodule "glibc"]
+	path = glibc
+	url = git@github.com:happynumb-wh/glibc.git
+	branch = dasics-glibc-2.36
